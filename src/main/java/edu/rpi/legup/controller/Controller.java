@@ -117,6 +117,7 @@ public abstract class Controller implements MouseMotionListener, MouseListener, 
      */
     @Override
     public void mouseWheelMoved(MouseWheelEvent e) {
+    	System.out.println(e.getWheelRotation());
         if (e.isControlDown()) {
             viewer.zoom(e.getWheelRotation() * 2, e.getPoint());
         } else {
